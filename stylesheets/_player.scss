@@ -1,0 +1,27 @@
+.player {
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+	text-align: center;
+	svg {
+		max-width: 1.5rem;
+		margin: .5rem;
+	}
+	progress {
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		width: 100%;
+	}
+	progress[value]::-webkit-progress-value {
+		background: $blue--green;
+		background: darken($blue, 12.5%);
+	}
+	progress[value]::-webkit-progress-bar {
+		background: mix($blue, $blue--green, 50%);
+	}
+	progress[value]::-moz-progress-value {
+		background: $blue--green;
+	}
+	progress[value]::-moz-progress-bar {
+		background: mix($blue, $blue--green, 50%);
+	}
+}

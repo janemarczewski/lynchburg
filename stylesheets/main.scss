@@ -1,0 +1,105 @@
+$yellow: #e6c89c;
+$yellow--sharp: #e2be6a;
+$blue: #5c9199;
+$blue--green: #568385;
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	box-sizing: border-box;
+	font: 300 100%/1.4 "proxima-nova", Avenir, Lucida Grande, sans-serif;
+	background: $blue;
+	color: white;
+	-webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+h1, h2, h3, h4, h5, h6 {
+}
+ul {
+	list-style: none;
+	li {
+		display: inline-block;
+	}
+}
+
+.headline {
+	&--main {
+		text-align: center;
+		font-weight: 700;
+		font-size: 1.75rem;
+	}
+	&--sub {
+		font-weight: 300;
+		font-size: 1.25rem;
+	}
+	&--share {
+		font-weight: 700;
+		font-size: 1.125rem;
+		display: block;
+		padding: 1rem .25rem;
+	}
+}
+.caps { text-transform: uppercase; }
+.let-2 { letter-spacing: 2px; }
+.let-5 { letter-spacing: 5px; }
+p {
+	font: 400 1.25rem/1.5 "chaparral-pro", century, georgia, serif;
+	margin-bottom: 1rem;
+	&:last-of-type {
+		margin-bottom: 0;
+	}
+}
+
+a {
+	text-decoration: none;
+	color: $yellow;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+// layout
+
+.header {
+	background: url('../images/jane--sunshine_notext.png') no-repeat center center / contain;
+	padding-top: 10rem;
+	padding-bottom: 10rem;
+}
+
+.container {
+	margin: 1rem auto;
+	max-width: 42rem;
+	padding-left: .75rem;
+	padding-right: .75rem;
+	width: 100%;
+}
+.sharing {
+	background: mix($blue, $blue--green, 50%);
+	text-align: center;
+	padding: 1rem;
+	a {
+		color: $yellow--sharp;
+	}
+}
+.footer {
+	text-align: center;
+	font-size: .875rem;
+}
+
+
+// letter stuff
+.salutation { display: none; }
+.hand { max-width: 15rem; }
+.bye { max-width: 10rem; }
+.closing {
+	margin-top: 1rem;
+	width: 100%;
+	text-align: right;
+}
+
+@import "player"

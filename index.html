@@ -1,69 +1,65 @@
 <!DOCTYPE html>
 <html>
-
   <head>
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="description" content="Lynchburg : ">
-
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+    <meta name="description" content="Lynchburg">
+    <meta name="viewport" content="width=device-width">
+    <script src="//use.typekit.net/jxi6vsq.js"></script>
+    <script>try{Typekit.load();}catch(e){}</script>
+    <link rel="stylesheet" type="text/css" media="screen" href="lynchburg.css">
 
     <title>Lynchburg</title>
   </head>
 
-  <body>
+  <body ng-app="plangular">
 
     <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/janemarczewski/lynchburg">View on GitHub</a>
-
-          <h1 id="project_title">Lynchburg</h1>
-          <h2 id="project_tagline"></h2>
-
-            <section id="downloads">
-              <a class="zip_download_link" href="https://github.com/janemarczewski/lynchburg/zipball/master">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="https://github.com/janemarczewski/lynchburg/tarball/master">Download this project as a tar.gz file</a>
-            </section>
+        <header class="header container">
+          <h1 class="headline--main caps let-5">Farewell Lynchburg</h1>
         </header>
-    </div>
 
     <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <p>Dear Lynchburg,</p>
-
+      <section id="main_content" class="container">
+        <img src="images/janesig_dear.svg" alt="" class="hand">
+        <p class="salutation">Dear Lynchburg,</p>
 <p>I have a lot to thank you for. If only you could see the difference between who I was and who I am. For a long time, I've been a world-class people pleaser, always presenting the version of myself that was most likable, responsible, realistic.</p>
-
 <p>But Lynchburg, you haven't allowed me to stay that way. I came into town in 2009, with the intent of becoming some kind of writer. No, a newscaster. Actually no, a teacher. A church-planter. A pastor's wife. Yeah, a pastor's wife.. I think.</p>
-
 <p>See, I couldn't decide. And that's because in the deepest and most secret part of me, I knew precisely what I wanted. The problem was that it could never happen. It was silly. Illogical. Statistically unlikely. Realistically improbable.</p>
-
 <p>But, Lynchburg, you helped me come around. I was inspired by you. Inspired by rain and strangers and front doors. I met people who didn't care if their dreams were far-fetched. I met people who liked it better that way.</p>
-
 <p>I was brought to life in a town full of dreamers who made me brave enough to share my voice. They told me that my songs mattered. I believed them. I believed you.</p>
-
 <p>And slowly, the vacuum-sealed and sterile version of me was seared open. I looked myself in the eyes with honesty--maybe for the first time--and found that at the heart of me I wanted to sing. And so the story has started.</p>
-
 <p>Life is too short not to do what you love. Lynchburg, you taught me that. And though these years have been the most difficult, they have been the most rewarding. It's not too late to do what you love. It's only the sunrise of our lives.</p>
-
 <p>Oh, and I wrote a song for you.</p>
+      <div class="closing">
+        <img src="images/janesig_lovealways.svg" alt="" class="bye">
+        <p class="salutation">Love Always,</p>
+        <p class="salutation">Jane</p>
 
-<p>Love Always,</p>
-
-<p>Jane</p>
-      </section>
-    </div>
-
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p class="copyright">Lynchburg maintained by <a href="https://github.com/janemarczewski">janemarczewski</a></p>
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </div>
+    </section>
+    <section class="container">
+      <div class="player" plangular="https://soundcloud.com/jane-marczewski/sunrise-of-our-lives-for-lynchburg">
+        <progress value="{{ currentTime / duration || 0 }}">{{ currentTime / duration }}</progress>
+        <small class="let-2">{{ currentTime | prettyTime }} | {{ duration | prettyTime }}</small>
+        <h3 class="headline--sub caps let-2">{{ track.title }}</h3>
+        <a ng-click="play()" ng-if="player.playing != track"><svg plangular-icon="play"></svg></a>
+		<a ng-click="pause()" ng-if="player.playing == track"><svg plangular-icon="pause"></svg>
+      </div>
+    </section>
+    <section class="container sharing footer">
+      <h3 class="headline--sub caps let-2">Share This</h3>
+      <ul>
+        <li><a class="caps let-2 headline--share" href="https://www.facebook.com/sharer/sharer.php?u=http://janemarczewski.com/lynchburg/">Facebook</a></li>
+        <li><a class="caps let-2 headline--share" href="https://twitter.com/intent/tweet?text='Sunrise of Our Lives (a song for Lynchburg)'&amp;http://janemarczewski.com/lynchburg/&amp;via=janemarczewski" target="_blank">Twitter</a></li>
+        <li><a href=";http://janemarczewski.com/lynchburg/" class="caps let-2 headline--share">Direct Link</a></li>
+      </ul>
+    </section>
+      <footer class="container footer">
+        <span class="copyright">&copy; Copyright 2014 Jane Marczewski. All Rights Reserved. Design by <a href="http://www.charlespeters.net/">Charles Peters</a> &amp; photography by <a href="http://www.abbeydeerest.com/">Abbey Sargent</a></span>
       </footer>
-    </div>
-
-    
+      <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular.min.js"></script>
+      <script src="http://d2v52k3cl9vedd.cloudfront.net/plangular/2.0-beta-1/ng-plangular.min.js"></script>
 
   </body>
 </html>
