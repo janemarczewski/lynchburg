@@ -1,5 +1,5 @@
 $yellow: #e6c89c;
-$yellow--sharp: #e2be6a;
+$yellow--sharp: #cd993f;
 $blue: #5c9199;
 $blue--green: #568385;
 
@@ -56,6 +56,10 @@ p {
 a {
 	text-decoration: none;
 	color: $yellow;
+	transition: all 375ms linear;
+	&:hover {
+		color: white;
+	}
 }
 
 img {
@@ -83,7 +87,7 @@ img {
 	text-align: center;
 	padding: 1rem;
 	a {
-		color: $yellow--sharp;
+		// color: $yellow--sharp;
 	}
 }
 .footer {

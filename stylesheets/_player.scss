@@ -2,6 +2,8 @@
 	margin-top: 2rem;
 	margin-bottom: 2rem;
 	text-align: center;
+	border: 2px solid $yellow;
+	padding: 1rem .5rem;
 	svg {
 		max-width: 1.5rem;
 		margin: .5rem;
@@ -14,9 +16,14 @@
 	progress[value]::-webkit-progress-value {
 		background: $blue--green;
 		background: darken($blue, 12.5%);
+		background: darken($blue, 5%);
+		background: $yellow;
 	}
 	progress[value]::-webkit-progress-bar {
 		background: mix($blue, $blue--green, 50%);
+		background: darken($blue--green, 10%);
+
+		// background: $yellow--sharp;
 	}
 	progress[value]::-moz-progress-value {
 		background: $blue--green;
